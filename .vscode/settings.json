@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true
+}
