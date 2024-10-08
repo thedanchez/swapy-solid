@@ -1,8 +1,26 @@
 {
-  "name": "template-solidjs-library",
-  "version": "0.0.0",
-  "description": "Template for SolidJS library using tsup for bundling. Configured with Bun, NVM, TypeScript, ESLint, Prettier, Vitest, and GHA",
+  "name": "swapy-solid",
+  "version": "0.1.0",
+  "description": "Solid components enabling drag and swap layouts via Swapy",
   "type": "module",
+  "author": "Daniel Sanchez <dsanc89@icloud.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/thedanchez/swapy-solid#readme",
+  "bugs": {
+    "url": "https://github.com/thedanchez/swapy-solid/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "Solid",
+    "SolidJS",
+    "swapy"
+  ],
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
@@ -17,7 +35,6 @@
     "test:cov": "vitest run --coverage",
     "typecheck": "tsc --noEmit"
   },
-  "license": "MIT",
   "devDependencies": {
     "@solidjs/testing-library": "^0.8.10",
     "@testing-library/jest-dom": "^6.5.0",
@@ -30,6 +47,8 @@
     "eslint-plugin-solid": "^0.14.3",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
+    "solid-js": "^1.9.1",
+    "swapy": "^0.4.1",
     "tsup": "^8.3.0",
     "tsup-preset-solid": "^2.2.0",
     "typescript": "^5.6.2",
@@ -38,6 +57,19 @@
     "vitest": "^2.1.1"
   },
   "peerDependencies": {
-    "solid-js": ">=1.8.0"
-  }
+    "solid-js": ">=1.8.0",
+    "swapy": ">=0.4.1"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "browser": {},
+  "exports": {
+    "solid": "./dist/index.jsx",
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {}
 }

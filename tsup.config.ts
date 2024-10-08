@@ -7,7 +7,7 @@ const generateSolidPresetOptions = (watching: boolean): preset.PresetOptions => 
       // entries with '.tsx' extension will have `solid` export condition generated
       entry: "src/index.tsx",
       dev_entry: false,
-      server_entry: true,
+      server_entry: false,
     },
   ],
   drop_console: !watching, // remove all `console.*` calls and `debugger` statements in prod builds
@@ -26,9 +26,11 @@ export default defineConfig((config) => {
     preset.writePackageJson(packageFields);
   }
 
-  const tsupOptions = preset
-    .generateTsupOptions(parsedOptions)
-    .map((tsupOption) => ({ name: "solid-js", ...tsupOption }));
+  const tsupOptions = preset.generateTsupOptions(parsedOptions).map((tsupOption) => ({
+    ...tsupOption,
+    name: "swapy-solid",
+    minify: true,
+  }));
 
   return tsupOptions;
 });

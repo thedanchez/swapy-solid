@@ -1,0 +1,13 @@
+.handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.item {
+  width: 100%;
+  background: yellow;
+}
