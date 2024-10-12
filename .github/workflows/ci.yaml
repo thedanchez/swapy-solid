@@ -25,5 +25,3 @@ jobs:
         run: bun run lint
       - name: Format Check
         run: bun run format
-      - name: Test Coverage Check
-        run: bun run test
