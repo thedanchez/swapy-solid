@@ -1,3 +1,9 @@
+<p>
+  <img width="100%" src="https://assets.solidjs.com/banner?type=Ecosystem&background=tiles&project=swapy-solid" alt="swapy-solid">
+</p>
+
+[![NPM Version](https://img.shields.io/npm/v/swapy-solid.svg?style=for-the-badge)](https://www.npmjs.com/package/swapy-solid) [![Build Status](https://img.shields.io/github/actions/workflow/status/thedanchez/swapy-solid/ci.yaml?branch=main&logo=github&style=for-the-badge)](https://github.com/thedanchez/swapy-solid/actions/workflows/ci.yaml) [![bun](https://img.shields.io/badge/maintained%20with-bun-cc00ff.svg?style=for-the-badge&logo=bun)](https://bun.sh/)
+
 # Swapy Solid
 
 This library provides a set of Solid components that streamline using [Swapy](https://swapy.tahazsh.com/) in your Solid applications. It exposes the Swapy API in declarative JSX form and provides a reactive enable/disable toggle when needed.
